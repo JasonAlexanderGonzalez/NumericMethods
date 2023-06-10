@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+    
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="stylesheets/principal.css" rel="stylesheet">
+    
+
+    <title>Conversion Bases Numericas</title>
+</head>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        swal({
+            title: "Bienvenido",
+            text: "¡Gracias por visitar nuestro sitio!",
+            icon: "", // Ruta de la imagen
+            timer: 3000, // Tiempo en milisegundos (5 segundos)
+            button: false // No mostrar botón de confirmación
+        });
+    });
+</script>
+      
+
+<header>
+<div id="nav">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <h3  class="underlined">
+             Metodo de Bisección                
+          </h3>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html"  style="color: black;">📟Inicio</a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="ManualDeUsuario.html" style="color: black;">📒Manual de Usuario</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="calculoxreal.html" style="color: black;">📟XReal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calcular.html" style="color: black;">📟Calcular Funcion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Graficando.html" style="color: black;">📟Graficar</a>
+                    </li>
+                    <li>
+                      <a href="creditos.html" class="nav-item nav-link" style="color: black;">🚹Creditos🚺</a>
+                    </li>
+                </ul>
+        </div>
+    </nav>
+  </div>
+</header>
+<br>
+<br>
+<br>
+<!-- Cuerpo  -->
+<body>
+  <h1>Base historica del metodo de bisección</h1>
+  <div id="biseccion">
+    
+    <p>La historia del método de bisección se remonta a los primeros días del cálculo numérico y la búsqueda de métodos para resolver ecuaciones no lineales. El método de bisección, también conocido como método de intervalos medios, es uno de los métodos más antiguos y sencillos para encontrar las raíces de una ecuación.</p>
+    
+    <p>El origen del método de bisección se puede rastrear hasta los matemáticos y astrónomos de la antigua Grecia. El famoso matemático griego Eudoxo de Cnido (408-355 a.C.) desarrolló una técnica llamada el "método del exceso y la deficiencia", que se utilizaba para encontrar aproximaciones sucesivas de las raíces de ecuaciones.</p>
+    
+    <p>Sin embargo, fue en el siglo XVI cuando el matemático francés François Viète (1540-1603) formalizó y popularizó el método de bisección. Viète fue uno de los matemáticos más destacados de su tiempo y es conocido por sus contribuciones en álgebra y trigonometría. En su obra "Variorum de rebus mathematicis responsorum, liber VIII" publicada en 1579, Viète menciona y describe el método de bisección.</p>
+    
+    <p>El método de bisección se basa en el teorema del valor intermedio, que establece que si una función es continua en un intervalo cerrado y toma valores de signo opuesto en los extremos de ese intervalo, entonces existe al menos una raíz en el intervalo. El método de bisección utiliza este principio para acotar la raíz de una ecuación dentro de un intervalo cada vez más pequeño.</p>
+    
+    <p>La idea básica del método de bisección es dividir repetidamente el intervalo en dos partes iguales y determinar en cuál de las dos partes se encuentra la raíz. Luego, se selecciona la mitad del intervalo que contiene la raíz y se repite el proceso hasta que se obtenga una aproximación suficientemente precisa de la raíz.</p>
+    
+    <p>A lo largo de los siglos, el método de bisección ha sido ampliamente utilizado y estudiado. Ha sido objeto de refinamientos y mejoras, y se ha aplicado en una amplia gama de áreas, incluyendo matemáticas, física, ingeniería y ciencias de la computación. Aunque existen métodos más eficientes y sofisticados para encontrar raíces de ecuaciones no lineales en la actualidad, el método de bisección sigue siendo una herramienta fundamental y básica en el arsenal de técnicas numéricas.</p>
+  </div>
+  <div class="videoUno">
+    <title>
+      <p>Apartado de videos con información sobre el metodo de bisección </p>
+    </title>
+    <p>
+     <h2> Historia de Augustin Louis Cauchy</h2>
+    </p>
+    <video
+     src="images/Videohistoria.mp4" controls>
+    </video>
+  </div>
+
+  <div class="videoDos">
+    <p>
+      <h2> Ejemplo del metodo de bisección</h2>
+     </p>
+    <video
+      src="images/ejemplo.mp4"controls>
+  </video>
+  </div>
+  
+  <div class="videoTres">
+    <p>
+      <h2> Ejemplo en excel del metodo de bisección</h2>
+     </p>
+  <video 
+    src="images/MétododeBisecciónusandoexcelejemplo.mp4" controls>
+</video>
+  </div>
+
+</body>
+
+<!-- Footer -->
+<footer id="footer" class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Metodos Numericos
+          </h6>
+          <br><br><br><br>
+          <p>
+            Calcula el metodo de bisección con nosotros 🧮
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Productos
+          </h6>
+          <p>
+            <a href="index.html" class="text-reset">Inicio🧮</a>
+          </p>
+          <p>
+            <a href="ManualDeUsuario.html" class="text-reset">Manual de Usuario📒</a>
+          </p>
+          <p>
+            <a href="calcular.html" class="text-reset">Calcular📟</a>
+          </p>
+          <p>
+            <a href="creditos.html" class="text-reset">Creditos🚹🚺</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
+          <p><i class="fas fa-home me-3"></i> Limon, UCR sede Caribe</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            Biseccion@ucr.ac.cr
+          </p>
+          <p><i class="fas fa-print me-3"></i> +506 8700 0000</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="http://127.0.0.1:3000/calcular.html">Biseccion.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+</html>

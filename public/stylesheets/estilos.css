@@ -1,0 +1,31 @@
+.card.cartaUno {
+    border: 2px solid #e91e63;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card.cartaDos {
+    border: 2px solid #ff9800;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card.cartaTres {
+    border: 2px solid #4caf50;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card.cartaCuatro {
+    border: 2px solid #9c27b0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card.cartaCinco {
+    border: 2px solid #2196f3;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  

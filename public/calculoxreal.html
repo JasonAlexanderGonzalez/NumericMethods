@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de x real</title>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    
+    <link href="stylesheets/calcularXreal.css" rel="stylesheet">
+    
+
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+
+    
+    <head>
+        <!-- Topbar End -->
+      <!-- Navbar Start -->
+      <header>
+        <br>
+        <div id="nav">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                  <h3  class="underlined">
+                     Metodo de Bisección                
+                  </h3>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html"  style="color: black;">📟Inicio</a>
+                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="ManualDeUsuario.html" style="color: black;">📒Manual de Usuario</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="calculoxreal.html" style="color: black;">📟XReal</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="calcular.html" style="color: black;">📟Calcular Funcion</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="Graficando.html" style="color: black;">📟Graficar</a>
+                          </li>
+                            <li>
+                              <a href="creditos.html" class="nav-item nav-link" style="color: black;">🚹Creditos🚺</a>
+                            </li>
+                        </ul>
+                </div>
+            </nav>
+          </div>
+        </header>
+        <!-- Navbar End -->
+    </head>
+ 
+  <script>
+    function calcularXReal() {
+      var funcion = document.getElementById("funcion").value;
+      var limiteInferior = parseFloat(document.getElementById("limiteInferior").value);
+      var limiteSuperior = parseFloat(document.getElementById("limiteSuperior").value);
+      var precision = parseFloat(document.getElementById("precision").value);
+      
+      if (isNaN(limiteInferior) || isNaN(limiteSuperior) || isNaN(precision)) {
+        document.getElementById("resultado").textContent = "Ingresa valores numéricos válidos";
+        return;
+      }
+
+      var resultado = encontrarXReal(funcion, limiteInferior, limiteSuperior, precision);
+
+      if (resultado === null) {
+        document.getElementById("resultado").textContent = "No se encontró un resultado en el rango especificado";
+      } else {
+        document.getElementById("resultado").textContent = "Resultado: " + resultado;
+      }
+    }
+
+    function encontrarXReal(funcion, limiteInferior, limiteSuperior, precision) {
+      var a = limiteInferior;
+      var b = limiteSuperior;
+      var c;
+
+      while (Math.abs(b - a) > precision) {
+        c = (a + b) / 2;
+
+        if (evaluarFuncion(funcion, c) === 0) {
+          return c;
+        } else if (evaluarFuncion(funcion, a) * evaluarFuncion(funcion, c) < 0) {
+          b = c;
+        } else {
+          a = c;
+        }
+      }
+
+      // Verificar si la diferencia entre a y b es menor que la precisión
+      if (Math.abs(b - a) <= precision) {
+        return (a + b) / 2;
+      }
+
+      return null;
+    }
+
+    function evaluarFuncion(funcion, x) {
+      try {
+        return eval(funcion);
+      } catch (error) {
+        console.error("Error al evaluar la función:", error);
+        return NaN;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <!-- animaciones -->
+
+
+  <!-- animaciones -->
+  <h1>Calculadora de x real</h1>
+ 
+  <div class="container">
+    <div class="input-container">
+        <label for="funcion">Función:</label>
+        <input type="text" id="funcion" placeholder="Ingresa la función">
+        <br>
+        <br>
+      </div>
+      
+      <div class="input-container">
+        <label for="limiteInferior"> Intervalo a:</label>
+        <input type="number" id="limiteInferior" placeholder="Límite inferior">
+        <br>
+        <br>
+      </div>
+      
+      <div class="input-container">
+        <label for="limiteSuperior">Intervalo b:</label>
+        <input type="number" id="limiteSuperior" placeholder="Límite superior">
+        <br>
+        <br>
+
+      </div>
+      
+      <div class="input-container">
+        <label for="precision">Precisión:</label>
+        <input type="number" id="precision" placeholder="Precisión">
+      </div>
+      
+
+    <button id="generar" onclick="calcularXReal()">Generar</button>
+
+    <div id="resultado"></div>
+  </div>
+
+</body>
+
+</html>
